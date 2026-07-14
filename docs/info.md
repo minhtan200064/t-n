@@ -1,20 +1,32 @@
-<!---
-
-This file is used to generate your project datasheet. Please fill in the information below and delete any unused
-sections.
-
-You can also include images in this folder and reference them in the markdown. Each image must be less than
-512 kb in size, and the combined size of all images must be less than 1 MB.
--->
+# 2-to-1 Multiplexer
 
 ## How it works
 
-Explain how your project works
+This project implements a simple 2-to-1 multiplexer.
+
+Inputs:
+
+- ui_in[0] = A
+- ui_in[1] = B
+- ui_in[2] = SEL
+
+Output:
+
+- uo_out[0] = Y
+
+Logic:
+
+Y = SEL ? B : A
+
+---
 
 ## How to test
 
-Explain how to use your project
+Set the inputs as follows:
 
-## External hardware
-
-List external hardware used in your project (e.g. PMOD, LED display, etc), if any
+| SEL | A | B | Y |
+|-----|---|---|---|
+|0|0|X|0|
+|0|1|X|1|
+|1|X|0|0|
+|1|X|1|1|
